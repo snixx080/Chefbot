@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChefBot — AI Recipe Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>ChefBot</h1>
+      <p class="tag">Turn your ingredients into delicious recipes — fast.</p>
+    </header>
+
+    <section class="card">
+      <label for="ingredients">Ingredients you have (comma separated)</label>
+      <textarea id="ingredients" placeholder="e.g. chicken, pasta, tomato, garlic"></textarea>
+
+      <label for="diet">Diet / preference</label>
+      <select id="diet">
+        <option value="">No preference</option>
+        <option value="vegan">Vegan</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="keto">Keto</option>
+        <option value="halal">Halal</option>
+        <option value="low-carb">Low-carb</option>
+        <option value="gluten-free">Gluten-free</option>
+      </select>
+
+      <div class="row">
+        <button id="generateBtn" class="primary">Get Recipe</button>
+        <button id="surpriseBtn" class="secondary">Surprise Me</button>
+      </div>
+    </section>
+
+    <section id="result" class="card hidden" aria-live="polite">
+      <div id="meta" class="meta"></div>
+      <h2 id="title"></h2>
+      <div id="body"></div>
+      <div class="row share-row">
+        <button id="shareBtn" class="primary" disabled>Share</button>
+        <button id="saveBtn" class="secondary" disabled>Save (Local)</button>
+      </div>
+    </section>
+
+    <footer class="card small">
+      <p>Monetization-ready: ad slot placeholder below.</p>
+      <div class="ads">[Ad slot — set up Google AdSense here]</div>
+      <p class="muted">Made with ♥ for families who love food. Deploy instructions included.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
